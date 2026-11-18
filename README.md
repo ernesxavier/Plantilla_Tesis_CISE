@@ -43,8 +43,10 @@ figuras/                  Logos e imágenes (PDF, PNG o JPG)
 | Escribir los capítulos                   | `codigo/*.tex`                           |
 | Agregar o quitar capítulos               | `main.tex` (`\include{...}`)             |
 | Agregar referencias                      | `referencias.bib`                        |
-| Cambiar el estilo de citas (p. ej., APA 7) | `codigo/configuracion.tex` (`style=apa`) |
+| Cambiar el estilo de citas (por defecto APA 7) | `codigo/configuracion.tex` (`style=...`) |
 | Marca de agua de borrador                | `codigo/configuracion.tex` (descomentar) |
+
+Las citas siguen el formato APA 7 (paquete `biblatex-apa`). En `referencias.bib`, escriba los títulos de artículos y libros como pide APA: en minúscula salvo la primera palabra, la palabra tras dos puntos y los nombres propios. Proteja los nombres propios con llaves, por ejemplo `{México}`. Los nombres de revistas sí van con mayúsculas.
 
 Al terminar, borre los `\lipsum` y la línea `\usepackage{lipsum}` de `configuracion.tex`.
 

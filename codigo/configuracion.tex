@@ -90,9 +90,12 @@
 %\SetWatermarkScale{0.75}
 
 % -------------------------- BIBLIOGRAFÍA -----------------------------
-% Estilo autor-año. Si el comité pide APA 7, use: style=apa
-\usepackage[backend=biber, style=authoryear, maxcitenames=2,
-            maxbibnames=10, uniquename=false, dashed=false]{biblatex}
+% APA 7 (paquete biblatex-apa). No agregue opciones como maxcitenames:
+% style=apa ya aplica las reglas de APA (et al., número de autores, etc.).
+% Para un autor-año genérico en lugar de APA, cambie la línea por:
+%   \usepackage[backend=biber, style=authoryear, maxcitenames=2,
+%               maxbibnames=10, uniquename=false, dashed=false]{biblatex}
+\usepackage[backend=biber, style=apa]{biblatex}
 \addbibresource{referencias.bib}
 
 % ------------------------- COMANDOS PROPIOS --------------------------
