@@ -10,15 +10,21 @@
 \usepackage[american, spanish, es-noquoting, es-nodecimaldot, es-tabla,
             es-lcroman]{babel}
 % es-tabla: "Tabla" en lugar de "Cuadro"; es-nodecimaldot: 0.5 y no 0'5
-% es-lcroman: páginas romanas en minúscula normal (Palatino no tiene
-%             versalitas en negrita, que es lo que usaría el índice)
+% es-lcroman: páginas romanas en minúscula normal (ii, iii); sin esta
+%             opción, babel las escribe en versalitas
 \usepackage{csquotes}
 
 % Los anexos se titulan "Anexo A" en lugar de "Apéndice A"
 \addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
 
 % ----------------------------- FUENTE --------------------------------
-\usepackage[sc]{mathpazo}           % Palatino en texto y matemáticas
+% Palatino (TeX Gyre Pagella) en el texto y en todas las ecuaciones,
+% incluidos los símbolos (=, +, \sum, \int, \mathcal...). newpxmath carga
+% amsmath y los símbolos de amssymb, así que no cargue amssymb aparte.
+% amsmath y amsthm deben cargarse ANTES que newpxmath.
+\usepackage{amsmath, amsthm}
+\usepackage{newpxtext}
+\usepackage{newpxmath}
 \usepackage{microtype}
 
 % ------------------------ GEOMETRÍA DE PÁGINA ------------------------
@@ -53,7 +59,6 @@
   \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0.5pt}}
 
 % --------------------------- MATEMÁTICAS -----------------------------
-\usepackage{amsmath, amssymb, amsthm}
 \newtheorem{teorema}{Teorema}[chapter]
 \newtheorem{corolario}[teorema]{Corolario}
 \newtheorem{lema}[teorema]{Lema}
