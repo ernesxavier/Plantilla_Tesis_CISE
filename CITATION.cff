@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Si usas esta plantilla, por favor cítala así."
+type: software
+title: "Plantilla de tesis del CISE en LaTeX"
+abstract: >-
+  Plantilla en LaTeX (pdfLaTeX + Biber) para tesis del Centro de
+  Investigaciones Socioeconómicas de la Universidad Autónoma de Coahuila:
+  portada institucional, capítulos de ejemplo con citas, ecuaciones, tablas,
+  figuras y anexos, y bibliografía en formato APA 7.
+authors:
+  - family-names: "Vera Gómez"
+    given-names: "Ernesto X."
+    affiliation: "Centro de Investigaciones Socioeconómicas (CISE), Universidad Autónoma de Coahuila"
+repository-code: "https://github.com/ernesxavier/Plantilla_Tesis_CISE"
+license:
+  - MIT
+  - CC-BY-4.0
+version: "2026.11"
+date-released: "2026-11-18"
+keywords:
+  - latex
+  - tesis
+  - thesis template
+  - overleaf
+  - apa 7
+  - biblatex

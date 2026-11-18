@@ -2,7 +2,7 @@
 
 Plantilla en LaTeX para tesis del Centro de Investigaciones Socioeconómicas (CISE) de la Universidad Autónoma de Coahuila. Reproduce el formato de la portada institucional (con las alturas ajustadas al recuadro de la tapa para el empastado). También incluye ejemplos listos para usar de citas, ecuaciones, tablas, figuras, subfiguras y anexos.
 
-Autor: Ernesto X. Vera Gómez
+Autor: Ernesto X. Vera Gómez, Centro de Investigaciones Socioeconómicas (CISE), Universidad Autónoma de Coahuila
 
 Vista previa: [`main.pdf`](main.pdf)
 
@@ -35,6 +35,9 @@ codigo/
   conclusiones.tex
   anexos.tex
 figuras/                  Logos e imágenes (PDF, PNG o JPG)
+CITATION.cff              Cómo citar la plantilla
+LICENSE                   Licencia MIT (código)
+LICENSE-CC-BY-4.0         Licencia CC BY 4.0 (documentación)
 ```
 
 ## Qué editar
@@ -56,6 +59,21 @@ No modifique los `\vspace` ni los tamaños de letra de la portada: están calibr
 
 ## Licencia
 
-El código de la plantilla se distribuye bajo la [licencia MIT](LICENSE).
+© 2026 Ernesto X. Vera Gómez, Centro de Investigaciones Socioeconómicas (CISE),
+Universidad Autónoma de Coahuila.
 
-**Los logotipos de `figuras/` no están cubiertos por esa licencia.** `uadec_marca_institucional*.png` y `cise.png` son marcas de la Universidad Autónoma de Coahuila y del CISE. Su uso se rige por el Manual de Marca de la UAdeC.
+- **Código de la plantilla** (`main.tex`, `codigo/` y `referencias.bib`): [MIT](LICENSE).
+- **Documentación** (este README, `main.pdf` y `figuras/figura_ejemplo.pdf`):
+  [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](LICENSE-CC-BY-4.0).
+  Se puede copiar, adaptar y redistribuir con cualquier fin, siempre que se
+  cite al autor y se indique si hubo cambios.
+- **Logotipos** (`figuras/uadec_marca_institucional*.png` y `figuras/cise.png`):
+  no están cubiertos por ninguna de las dos licencias. Son marcas de la
+  Universidad Autónoma de Coahuila y del CISE, y su uso se rige por el Manual
+  de Marca de la UAdeC.
+
+El texto de la tesis que escriba con la plantilla es suyo: las licencias solo
+cubren la plantilla.
+
+Para citar la plantilla, use el botón *Cite this repository* de GitHub
+([`CITATION.cff`](CITATION.cff)).
