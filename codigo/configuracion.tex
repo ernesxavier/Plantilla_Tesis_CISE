@@ -7,8 +7,11 @@
 % ----------------------------- IDIOMA --------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[american, spanish, es-noquoting, es-nodecimaldot, es-tabla]{babel}
+\usepackage[american, spanish, es-noquoting, es-nodecimaldot, es-tabla,
+            es-lcroman]{babel}
 % es-tabla: "Tabla" en lugar de "Cuadro"; es-nodecimaldot: 0.5 y no 0'5
+% es-lcroman: páginas romanas en minúscula normal (Palatino no tiene
+%             versalitas en negrita, que es lo que usaría el índice)
 \usepackage{csquotes}
 
 % Los anexos se titulan "Anexo A" en lugar de "Apéndice A"
@@ -79,6 +82,7 @@
 
 % --------------------------- OTROS -----------------------------------
 \usepackage{multicol}
+\usepackage[nohyperlinks]{acronym}  % Siglas: \ac{INEGI} (ver codigo/siglas.tex)
 \usepackage{lipsum}                 % Texto de relleno: borrar al terminar
 \SetLipsumLanguage{spanish}         % Evita el aviso por el idioma "latin"
 

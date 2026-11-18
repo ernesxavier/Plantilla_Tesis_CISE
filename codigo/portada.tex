@@ -17,6 +17,19 @@
 \newcommand{\lugar}{Saltillo, Coahuila}
 \newcommand{\fecha}{Mes de 2026}
 
+% Se usan en el Resumen, el Abstract y los metadatos del PDF
+\newcommand{\palabrasclave}{palabra uno, palabra dos, palabra tres}
+\newcommand{\keywordsingles}{keyword one, keyword two, keyword three}
+\newcommand{\codigosjel}{R11, R12, O18}   % https://www.aeaweb.org/jel/guide/jel.php
+
+% Metadatos del PDF (los leen los repositorios institucionales y buscadores)
+\hypersetup{
+  pdftitle    = {\titulotesis},
+  pdfauthor   = {\autortesis},
+  pdfsubject  = {Tesis de \programa, CISE, Universidad Autónoma de Coahuila},
+  pdfkeywords = {\palabrasclave},
+}
+
 \thispagestyle{empty}
 \begingroup
 \centering

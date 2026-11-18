@@ -1,0 +1,20 @@
+% =====================================================================
+%  SIGLAS Y ABREVIATURAS — paquete acronym
+%
+%  Defina cada sigla aquí, en orden alfabético, y úsela en el texto con
+%    \ac{INEGI}   -> la 1.ª vez: "Instituto Nacional de ... (INEGI)";
+%                    después solo "INEGI"
+%    \acs{INEGI}  -> siempre la sigla      \acl{INEGI} -> siempre el nombre
+%  Si quita esta lista de main.tex, reemplace también los \ac del texto.
+% =====================================================================
+\chapter*{Siglas y abreviaturas}
+\addcontentsline{toc}{chapter}{Siglas y abreviaturas}
+\markboth{Siglas y abreviaturas}{Siglas y abreviaturas}
+
+% El argumento opcional es la sigla más larga (alinea las descripciones).
+\begin{acronym}[CONEVAL]
+  \acro{CONEVAL}{Consejo Nacional de Evaluación de la Política de Desarrollo Social}
+  \acro{INEGI}{Instituto Nacional de Estadística y Geografía}
+  \acro{MCO}{mínimos cuadrados ordinarios}
+  \acro{PIB}{producto interno bruto}
+\end{acronym}

@@ -6,7 +6,10 @@
 %    main.tex                 <- este archivo (orden de las secciones)
 %    referencias.bib          <- bibliografía (exportada de Zotero)
 %    codigo/configuracion.tex <- paquetes, márgenes, interlineado, estilos
-%    codigo/portada.tex       <- portada y datos de la tesis
+%    codigo/portada.tex       <- portada, datos de la tesis y palabras clave
+%    codigo/dedicatoria.tex, codigo/agradecimientos.tex   (opcionales)
+%    codigo/resumen.tex       <- resumen y abstract
+%    codigo/siglas.tex        <- siglas y abreviaturas (opcional)
 %    codigo/introduccion.tex
 %    codigo/capitulo_1.tex ... codigo/capitulo_4.tex
 %    codigo/conclusiones.tex  <- conclusiones y recomendaciones
@@ -38,13 +41,16 @@
 \include{codigo/portada}      % Sin número de página, como la original
 
 % --------------------------- PRELIMINARES ----------------------------
+% Las opcionales se quitan comentando su línea con %.
 \frontmatter                  % Numeración romana desde i
-
-% \include{codigo/dedicatoria}  % Opcional: dedicatoria / agradecimientos
+\include{codigo/dedicatoria}      % Opcional
+\include{codigo/agradecimientos}  % Opcional (obligatorio si tuvo beca SECIHTI)
+\include{codigo/resumen}          % Resumen y Abstract
 
 \tableofcontents              % Índice general
 \listoffigures                % Índice de figuras
 \listoftables                 % Índice de tablas
+\include{codigo/siglas}           % Opcional: siglas y abreviaturas
 
 % ------------------------- CUERPO DE LA TESIS ------------------------
 \mainmatter                   % Numeración arábiga desde 1
