@@ -1,0 +1,97 @@
+% =====================================================================
+%  DECLARACIÓN DE ORIGINALIDAD Y AUTORÍA — opcional
+%  Nombre, título, programa, director(a) y fecha se toman de portada.tex.
+%  Verifique si el CISE o la UAdeC tienen un formato oficial.
+% =====================================================================
+
+% ¿Usó herramientas de inteligencia artificial generativa?
+%   \usoiatrue  -> sí: llene la tabla de abajo
+%   \usoiafalse -> no: la tabla y sus declaraciones no se imprimen
+\newif\ifusoia
+\usoiatrue
+
+% Título centrado y compacto (sin el encabezado grande de los capítulos)
+% para que la declaración quepa en una página si no usó IA.
+\thispagestyle{plain}
+\phantomsection
+\addcontentsline{toc}{chapter}{Declaración de originalidad y autoría}
+\markboth{Declaración de originalidad y autoría}{Declaración de originalidad y autoría}
+
+\begingroup
+\setstretch{1.0}
+\setlength{\parskip}{0.15cm}
+\setlist{itemsep=0pt, parsep=0pt, topsep=2pt}
+
+\begin{center}
+  {\large\bfseries DECLARACIÓN DE ORIGINALIDAD Y AUTORÍA\par}
+\end{center}
+
+Yo, \textbf{\autortesis}, estudiante del programa de \programa{} del Centro
+de Investigaciones Socioeconómicas de la Universidad Autónoma de Coahuila,
+con matrícula \matricula, declaro bajo protesta de decir verdad que:
+
+\begin{enumerate}
+  \item La tesis titulada \enquote{\titulotesis} es de mi autoría y es
+        resultado de mi trabajo de investigación, realizado bajo la
+        dirección de \director{} y la codirección de \codirector.
+  \item No ha sido presentada, ni total ni parcialmente, para obtener otro
+        grado académico en esta u otra institución.
+  \item Todas las ideas, datos, figuras, tablas y textos tomados de otras
+        fuentes están citados y referenciados según el formato APA~7.
+        Cualquier omisión en este sentido es responsabilidad mía.
+  \item Los datos y resultados que presento son auténticos. No he inventado
+        ni manipulado información.
+  \item Cuando la tesis incluye partes de artículos ya publicados o enviados
+        para publicación, lo indico expresamente en el texto, con la
+        referencia y la participación de los coautores.
+\end{enumerate}
+
+\textbf{Uso de herramientas de inteligencia artificial}
+
+\ifusoia$\square$\else$\boxtimes$\fi\enspace \textbf{No utilicé} herramientas
+de inteligencia artificial generativa en la elaboración de esta tesis.
+
+\ifusoia$\boxtimes$\else$\square$\fi\enspace \textbf{Utilicé} herramientas
+de inteligencia artificial generativa\ifusoia{} como se detalla a
+continuación:
+
+\begin{center}\small
+\begin{tabular}{p{3.8cm}p{7.6cm}p{4cm}}
+  \toprule
+  Herramienta y versión & Uso & Capítulos o secciones \\
+  \midrule
+  % Una fila por herramienta o por uso distinto:
+  Nombre y versión & Corrección de estilo y traducción del abstract & Abstract \\
+  Nombre y versión & Depuración de código en R o Stata & Capítulo 3 \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+Declaro que:
+\begin{itemize}
+  \item Revisé, verifiqué y edité todo el contenido producido con estas
+        herramientas, y asumo plena responsabilidad por su exactitud.
+  \item La inteligencia artificial no aparece como autora ni coautora, y no
+        la utilicé para generar resultados, datos ni conclusiones que se
+        presenten como propios sin verificarlos.
+  \item Las referencias bibliográficas citadas fueron consultadas
+        directamente en su fuente original.
+\end{itemize}
+\else.
+\fi
+
+% El cierre, la fecha y la firma van juntos (nunca se separan de página)
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\setlength{\parskip}{0.15cm}
+Acepto que la falta de veracidad en esta declaración puede dar lugar a las
+sanciones previstas en la normativa de la Universidad Autónoma de Coahuila.
+
+\lugar, a \rule{1.2cm}{0.4pt} de \fecha.
+
+\vspace{1.3cm}
+\begin{center}
+  \rule{7cm}{0.4pt}\\
+  \autortesis
+\end{center}
+\end{minipage}
+\endgroup

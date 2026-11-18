@@ -30,6 +30,7 @@ referencias.bib           Bibliografía (p. ej., exportada de Zotero)
 codigo/
   configuracion.tex       Paquetes, márgenes, interlineado y estilos
   portada.tex             Portada, datos de la tesis, palabras clave y JEL
+  originalidad.tex        Declaración de originalidad y uso de IA (opcional)
   dedicatoria.tex         Opcional
   agradecimientos.tex     Opcional (incluye el agradecimiento a la SECIHTI)
   resumen.tex             Resumen y Abstract
@@ -51,7 +52,8 @@ LICENSE-CC-BY-4.0         Licencia CC BY 4.0 (documentación)
 | Poner título, autor, programa y comité   | `codigo/portada.tex` (solo los datos entre llaves) |
 | Poner palabras clave y códigos JEL       | `codigo/portada.tex` (también llenan los metadatos del PDF) |
 | Escribir el resumen y el abstract        | `codigo/resumen.tex`                     |
-| Quitar la dedicatoria, los agradecimientos o las siglas | `main.tex` (comentar su `\include`) |
+| Declarar si usó inteligencia artificial  | `codigo/originalidad.tex` (`\usoiatrue` o `\usoiafalse` y la tabla) |
+| Quitar la declaración, la dedicatoria, los agradecimientos o las siglas | `main.tex` (comentar su `\include`) |
 | Agregar siglas (`\ac{INEGI}` en el texto) | `codigo/siglas.tex`                     |
 | Escribir los capítulos                   | `codigo/*.tex`                           |
 | Agregar o quitar capítulos               | `main.tex` (`\include{...}`)             |
