@@ -1,6 +1,6 @@
 # Plantilla de tesis — CISE, UAdeC
 
-Plantilla en LaTeX para tesis del Centro de Investigaciones Socioeconómicas (CISE) de la Universidad Autónoma de Coahuila. Reproduce el formato de la portada institucional (con las alturas ajustadas al recuadro de la tapa para el empastado). También incluye ejemplos listos para usar de citas, ecuaciones, tablas, figuras, subfiguras y anexos.
+Plantilla en LaTeX para tesis del Centro de Investigaciones Socioeconómicas (CISE) de la Universidad Autónoma de Coahuila. Reproduce las dos páginas de portada de las tesis del CISE con sus mismas medidas: la tapa con triple marco y el recuadro que coincide con la tapa al empastar, y la portada interior con los logos del Manual de Marca de la UAdeC. También incluye ejemplos listos para usar de citas, ecuaciones, tablas, figuras, subfiguras y anexos.
 
 Autor: Ernesto X. Vera Gómez, Centro de Investigaciones Socioeconómicas (CISE), Universidad Autónoma de Coahuila
 
@@ -29,7 +29,7 @@ main.tex                  Archivo principal (el único que se compila)
 referencias.bib           Bibliografía (p. ej., exportada de Zotero)
 codigo/
   configuracion.tex       Paquetes, márgenes, interlineado y estilos
-  portada.tex             Portada, datos de la tesis, palabras clave y JEL
+  portada.tex             Tapa con marco, portada interior, datos de la tesis, palabras clave y JEL
   originalidad.tex        Declaraciones de originalidad y de uso de IA, una página cada una (opcional)
   dedicatoria.tex         Opcional
   agradecimientos.tex     Opcional (incluye el agradecimiento a la SECIHTI)
@@ -49,7 +49,8 @@ LICENSE-CC-BY-4.0         Licencia CC BY 4.0 (documentación)
 
 | Quiero…                                  | Archivo                                  |
 |------------------------------------------|------------------------------------------|
-| Poner título, autor, programa y comité   | `codigo/portada.tex` (solo los datos entre llaves) |
+| Poner título, autor, programa, comité y año | `codigo/portada.tex` (solo los datos entre llaves) |
+| Quitar la tapa con marco                 | `codigo/portada.tex` (`\tapafalse`)      |
 | Poner palabras clave y códigos JEL       | `codigo/portada.tex` (también llenan los metadatos del PDF) |
 | Escribir el resumen y el abstract        | `codigo/resumen.tex`                     |
 | Declarar si usó inteligencia artificial  | `codigo/originalidad.tex` (`\usoiatrue` o `\usoiafalse` y la tabla) |
@@ -65,7 +66,7 @@ Las citas siguen el formato APA 7 (paquete `biblatex-apa`). En `referencias.bib`
 
 Al terminar, borre los `\lipsum` y la línea `\usepackage{lipsum}` de `configuracion.tex`.
 
-No modifique los `\vspace` ni los tamaños de letra de la portada: están calibrados para que coincidan con el recuadro de la tapa.
+No modifique los `\vspace`, los tamaños de letra ni las medidas de los marcos de la portada. Están calibrados para que la tapa y la portada interior coincidan con las tesis anteriores del CISE y con el recuadro de la tapa al empastar.
 
 ## Licencia
 

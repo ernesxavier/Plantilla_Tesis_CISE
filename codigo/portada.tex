@@ -1,10 +1,13 @@
 % =====================================================================
 %  PORTADA — edite solo los datos entre llaves
 %
-%  Los espacios verticales están ajustados para que el título, el nombre
-%  y el comité queden a la misma altura que en la portada anterior del
-%  CISE (al empastar, la tapa tiene un recuadro que debe coincidir).
-%  No cambie los \vspace ni los tamaños de letra.
+%  Genera dos páginas con las medidas de las tesis del CISE:
+%    1. Tapa: triple marco de 16.5 x 22.5 cm con un recuadro de 10 x 6 cm
+%       (TESIS, año, nombre y título) que coincide con la tapa al empastar.
+%    2. Portada interior: logos, programa, título, grado, nombre y comité.
+%  No cambie los \vspace, los tamaños de letra ni las medidas de los
+%  marcos: están calibrados para que cada bloque quede a la misma altura
+%  que en las tesis anteriores del CISE.
 % =====================================================================
 \newcommand{\titulotesis}{Título de la tesis}
 \newcommand{\autortesis}{Nombre Completo del Estudiante}
@@ -13,10 +16,17 @@
 \newcommand{\grado}{Doctor(a) en Ciencias en Economía Regional}
 \newcommand{\director}{Dr(a). Nombre del Director(a) (CISE)}
 \newcommand{\codirector}{Dr(a). Nombre del Codirector(a) (CISE)}
-\newcommand{\lectoruno}{Dr(a). Nombre del Lector(a)}
-\newcommand{\lectordos}{Dr(a). Nombre del Lector(a)}
+\newcommand{\lectoruno}{Dr(a). Nombre del Lector(a) (Institución)}
+\newcommand{\lectordos}{Dr(a). Nombre del Lector(a) (Institución)}
+\newcommand{\lectortres}{Dr(a). Nombre del Lector(a) (Institución)}
 \newcommand{\lugar}{Saltillo, Coahuila}
 \newcommand{\fecha}{Mes de 2026}
+\newcommand{\anio}{2026}            % Año que aparece en el recuadro de la tapa
+
+% ¿Incluir la tapa con marco? (\tapafalse para quitarla, p. ej. si el
+% programa solo pide la portada interior en la versión digital)
+\newif\iftapa
+\tapatrue
 
 % Se usan en el Resumen, el Abstract y los metadatos del PDF
 \newcommand{\palabrasclave}{palabra uno, palabra dos, palabra tres}
@@ -31,11 +41,57 @@
   pdfkeywords = {\palabrasclave},
 }
 
+% =====================================================================
+%  1. TAPA (triple marco y recuadro)
+% =====================================================================
+\iftapa
+\thispagestyle{empty}
+\begingroup
+\fboxrule=1pt\fbox{\fboxrule=2pt\fbox{\fboxrule=1pt\fbox{%
+\parbox[c][22.5cm][t]{16.5cm}{%
+\vspace{1cm}
+\begin{center}
+\large
+\textbf{UNIVERSIDAD AUTÓNOMA DE COAHUILA}
+
+\textbf{CENTRO DE INVESTIGACIONES SOCIOECONÓMICAS}
+
+\vspace{2cm}
+
+\Large
+\textbf{TESIS}
+
+\vspace{6cm}
+
+% Recuadro de 10 x 6 cm
+\fboxrule=1pt\fbox{\fboxrule=2pt\fbox{\parbox[b][6cm][t]{10cm}{
+
+\begin{center}
+\normalsize
+TESIS
+
+\anio
+
+\vspace{0.3cm}
+\MakeUppercase{\autortesis}
+
+\vspace{0.3cm}
+\textbf{\textquotedblleft\titulotesis\textquotedblright}
+\end{center}
+
+}}}
+\end{center}
+}}}}
+\endgroup
+\clearpage
+\fi
+
+% =====================================================================
+%  2. PORTADA INTERIOR
+% =====================================================================
 \thispagestyle{empty}
 \begingroup
 \centering
-\singlespacing
-\setlength{\parskip}{0pt}   % Sin espacio extra entre párrafos en la portada
 
 % Logos (Manual de Marca UAdeC, 11/03/2026): la Marca Institucional va
 % primero y con mayor peso que el logo del CISE; mínimo 3 cm de largo.
@@ -50,36 +106,34 @@
   \includegraphics[height=0.85cm]{cise}
 \end{minipage}\par
 
-\vspace{0.24cm}
-{\large\bfseries CENTRO DE INVESTIGACIONES SOCIOECONÓMICAS\par}
-\vspace{0.03cm}
-{\large\bfseries \MakeUppercase{\programa}\par}
+{\large\bfseries CENTRO DE INVESTIGACIONES SOCIOECONÓMICAS\\
+\MakeUppercase{\programa}\par}
 
-\vspace{0.74cm}
 {\Large TESIS\par}
 
-\vspace{1.54cm}
+\vspace{1cm}
 {\Large\bfseries \titulotesis\par}
 
-\vspace{0.39cm}
-{\large que presenta como requisito parcial para obtener\\
+\vspace{0.74cm}
+{\Large que presenta como requisito parcial para obtener\\
 el grado de \grado\par}
 
-\vspace{0.37cm}
-{\Large\bfseries \autortesis\par}
+\vspace{1.24cm}
+{\Large\bfseries \MakeUppercase{\autortesis}\par}
 
-\vspace{1.99cm}
+\vspace{1.25cm}
 {\Large\bfseries Comité Evaluador:\par}
-\vspace{0.44cm}
 {\large
+% Si su comité tiene otro número de lectores, agregue o borre filas.
 \begin{tabular}{rl}
   Director(a):   & \director \\
   Codirector(a): & \codirector \\
   Lector(a):     & \lectoruno \\
   Lector(a):     & \lectordos \\
+  Lector(a):     & \lectortres \\
 \end{tabular}\par}
 
-\vspace{0.74cm}
+\vspace{1.24cm}
 {\large \lugar\\ \fecha\par}
 
 \endgroup
