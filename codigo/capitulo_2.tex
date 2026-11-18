@@ -1,0 +1,40 @@
+% =====================================================================
+%  CAPÍTULO 2 — Ejemplo: metodología (ecuaciones y referencias cruzadas)
+% =====================================================================
+\chapter{Título del capítulo 2}\label{cap:capitulo2}
+
+\section{Introducción del capítulo}
+
+\lipsum[9]
+
+\section{Modelo teórico}
+
+% Ecuación numerada: \begin{equation} ... \label{eq:...} \end{equation}
+Siguiendo a \textcite{mankiw1992}, la función de producción es
+\begin{equation}
+  Y_t = K_t^{\alpha} H_t^{\beta} (A_t L_t)^{1-\alpha-\beta},
+  \qquad \alpha + \beta < 1. \label{eq:produccion}
+\end{equation}
+
+% Varias ecuaciones alineadas en el signo "=": entorno align
+El problema del hogar y su Lagrangiano son:
+\begin{align}
+  \max_{c,\,\ell} \; & u(c, \ell) \quad \text{s.a.} \quad c = w(1-\ell) + y, \label{eq:problema}\\
+  \mathcal{L} &= u(c,\ell) + \lambda\,[w(1-\ell) + y - c]. \label{eq:lagrangiano}
+\end{align}
+
+\section{Estrategia empírica}
+
+El modelo econométrico es
+\begin{equation}
+  y_i = \beta_0 + \beta_1 x_i + \mathbf{z}_i^{\top}\boldsymbol{\gamma}
+        + \varepsilon_i, \qquad \E[\varepsilon_i \mid x_i, \mathbf{z}_i] = 0,
+  \label{eq:modelo}
+\end{equation}
+que se estima por mínimos cuadrados ordinarios
+\parencite{wooldridge2010, angrist2009}. La \cref{eq:modelo} se deriva de la
+\cref{eq:produccion}; los resultados se presentan en el \cref{cap:capitulo3}.
+
+\section{Datos}
+
+\lipsum[10]

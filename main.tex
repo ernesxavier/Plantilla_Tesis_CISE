@@ -1,0 +1,64 @@
+% =====================================================================
+%  PLANTILLA DE TESIS — CISE, Universidad Autónoma de Coahuila
+%  Archivo principal: es el ÚNICO que se compila.
+%
+%  Estructura:
+%    main.tex                 <- este archivo (orden de las secciones)
+%    referencias.bib          <- bibliografía (exportada de Zotero)
+%    codigo/configuracion.tex <- paquetes, márgenes, interlineado, estilos
+%    codigo/portada.tex       <- portada y datos de la tesis
+%    codigo/introduccion.tex
+%    codigo/capitulo_1.tex ... codigo/capitulo_4.tex
+%    codigo/conclusiones.tex  <- conclusiones y recomendaciones
+%    codigo/anexos.tex
+%    figuras/                 <- logos e imágenes (PDF, PNG o JPG)
+%
+%  Compilar con pdfLaTeX + Biber (Overleaf lo hace automáticamente).
+% =====================================================================
+\documentclass[12pt, oneside, letterpaper]{book}
+
+% La configuración va en el preámbulo, donde \include no está permitido;
+% por eso se carga con \input.
+\input{codigo/configuracion}
+
+% ---------------------- COMPILAR SOLO ALGUNAS SECCIONES --------------
+% Para compilar más rápido mientras escribe, descomente y deje solo las
+% secciones en las que está trabajando. La numeración del resto se conserva.
+%\includeonly{
+%codigo/introduccion,
+%codigo/capitulo_1,
+%}
+
+\begin{document}
+
+% ------------------------------ PORTADA ------------------------------
+% Numeración interna "A" (no se imprime) para que la portada no comparta
+% el número 1 con el primer capítulo y los enlaces del PDF no se confundan.
+\pagenumbering{Alph}
+\include{codigo/portada}      % Sin número de página, como la original
+
+% --------------------------- PRELIMINARES ----------------------------
+\frontmatter                  % Numeración romana desde i
+
+% \include{codigo/dedicatoria}  % Opcional: dedicatoria / agradecimientos
+
+\tableofcontents              % Índice general
+\listoffigures                % Índice de figuras
+\listoftables                 % Índice de tablas
+
+% ------------------------- CUERPO DE LA TESIS ------------------------
+\mainmatter                   % Numeración arábiga desde 1
+\include{codigo/introduccion}
+\include{codigo/capitulo_1}
+\include{codigo/capitulo_2}
+\include{codigo/capitulo_3}
+\include{codigo/capitulo_4}
+\include{codigo/conclusiones}
+
+% ---------------------------- REFERENCIAS ----------------------------
+\printbibliography[heading=bibintoc, title={Referencias}]
+
+% ------------------------------- ANEXOS ------------------------------
+\include{codigo/anexos}
+
+\end{document}

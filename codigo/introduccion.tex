@@ -1,0 +1,39 @@
+% =====================================================================
+%  INTRODUCCIÓN — capítulo sin número
+% =====================================================================
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción}  % Lo agrega al índice
+\markboth{Introducción}{Introducción}
+% Sin \label: un capítulo sin número no se puede citar con \cref
+% (tomaría el número del capítulo anterior). Escriba "la introducción".
+
+% Contenido sugerido: planteamiento del problema, justificación, pregunta
+% de investigación, objetivos, hipótesis y organización del documento.
+% En un capítulo sin número use \section* (secciones sin número).
+
+\section*{Planteamiento del problema}
+
+\lipsum[1]
+
+\section*{Objetivos}
+
+\textbf{Objetivo general.} \lipsum[2][1-3]
+
+\textbf{Objetivos específicos:}
+\begin{enumerate}
+  \item \lipsum[3][1]
+  \item \lipsum[3][2]
+  \item \lipsum[3][3]
+\end{enumerate}
+
+\section*{Hipótesis}
+
+\lipsum[4][1-4]
+
+\section*{Estructura de la tesis}
+
+% Con \cref los números se actualizan solos si cambia el orden.
+La tesis se organiza en cuatro capítulos. El \cref{cap:capitulo1} \ldots; el
+\cref{cap:capitulo2} \ldots; el \cref{cap:capitulo3} \ldots y el
+\cref{cap:capitulo4} \ldots. Finalmente se presentan las conclusiones y
+recomendaciones.
