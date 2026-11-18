@@ -2,6 +2,8 @@
 
 Plantilla en LaTeX para tesis del Centro de Investigaciones Socioeconómicas (CISE) de la Universidad Autónoma de Coahuila. Reproduce el formato de la portada institucional (con las alturas ajustadas al recuadro de la tapa para el empastado). También incluye ejemplos listos para usar de citas, ecuaciones, tablas, figuras, subfiguras y anexos.
 
+Autor: Ernesto X. Vera Gómez
+
 Vista previa: [`main.pdf`](main.pdf)
 
 ## Uso en Overleaf
