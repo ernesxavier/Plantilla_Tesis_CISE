@@ -30,7 +30,7 @@ referencias.bib           Bibliografía (p. ej., exportada de Zotero)
 codigo/
   configuracion.tex       Paquetes, márgenes, interlineado y estilos
   portada.tex             Portada, datos de la tesis, palabras clave y JEL
-  originalidad.tex        Declaración de originalidad y uso de IA (opcional)
+  originalidad.tex        Declaraciones de originalidad y de uso de IA, una página cada una (opcional)
   dedicatoria.tex         Opcional
   agradecimientos.tex     Opcional (incluye el agradecimiento a la SECIHTI)
   resumen.tex             Resumen y Abstract

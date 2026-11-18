@@ -1,30 +1,48 @@
 % =====================================================================
-%  DECLARACIÓN DE ORIGINALIDAD Y AUTORÍA — opcional
+%  DECLARACIONES — opcional. Dos páginas, cada una con su firma:
+%    1. Declaración de originalidad y autoría
+%    2. Declaración de uso de inteligencia artificial
 %  Nombre, título, programa, director(a) y fecha se toman de portada.tex.
 %  Verifique si el CISE o la UAdeC tienen un formato oficial.
 % =====================================================================
 
 % ¿Usó herramientas de inteligencia artificial generativa?
-%   \usoiatrue  -> sí: llene la tabla de abajo
-%   \usoiafalse -> no: la tabla y sus declaraciones no se imprimen
+%   \usoiatrue  -> sí: llene la tabla de la segunda página
+%   \usoiafalse -> no: se marca "No utilicé" y la tabla no se imprime
 \newif\ifusoia
 \usoiatrue
 
-% Título centrado y compacto (sin el encabezado grande de los capítulos)
-% para que la declaración quepa en una página si no usó IA.
-\thispagestyle{plain}
-\phantomsection
-\addcontentsline{toc}{chapter}{Declaración de originalidad y autoría}
-\markboth{Declaración de originalidad y autoría}{Declaración de originalidad y autoría}
+% --- Formato común de las dos páginas (no es necesario editarlo) -----
+% Título centrado y sencillo, sin el encabezado grande de los capítulos
+\newcommand{\titulodeclaracion}[1]{%
+  \thispagestyle{plain}%
+  \phantomsection
+  \addcontentsline{toc}{chapter}{#1}%
+  \markboth{#1}{#1}%
+  \begin{center}{\large\bfseries\MakeUppercase{#1}\par}\end{center}
+  \vspace{0.5cm}}
+% Cierre, fecha y firma (siempre juntos en la misma página)
+\newcommand{\firmadeclaracion}{%
+  \par\bigskip\noindent
+  \begin{minipage}{\linewidth}
+    \setlength{\parskip}{0.3cm}
+    Acepto que la falta de veracidad en esta declaración puede dar lugar
+    a las sanciones previstas en la normativa de la Universidad Autónoma
+    de Coahuila.
 
-\begingroup
-\setstretch{1.0}
-\setlength{\parskip}{0.15cm}
-\setlist{itemsep=0pt, parsep=0pt, topsep=2pt}
+    \lugar, a \rule{1.2cm}{0.4pt} de \fecha.
 
-\begin{center}
-  {\large\bfseries DECLARACIÓN DE ORIGINALIDAD Y AUTORÍA\par}
-\end{center}
+    \vspace{1.6cm}
+    \begin{center}
+      \rule{7cm}{0.4pt}\\
+      \autortesis
+    \end{center}
+  \end{minipage}\par}
+
+% =====================================================================
+%  1. ORIGINALIDAD Y AUTORÍA
+% =====================================================================
+\titulodeclaracion{Declaración de originalidad y autoría}
 
 Yo, \textbf{\autortesis}, estudiante del programa de \programa{} del Centro
 de Investigaciones Socioeconómicas de la Universidad Autónoma de Coahuila,
@@ -46,7 +64,17 @@ con matrícula \matricula, declaro bajo protesta de decir verdad que:
         referencia y la participación de los coautores.
 \end{enumerate}
 
-\textbf{Uso de herramientas de inteligencia artificial}
+\firmadeclaracion
+
+% =====================================================================
+%  2. USO DE INTELIGENCIA ARTIFICIAL
+% =====================================================================
+\clearpage
+\titulodeclaracion{Declaración de uso de inteligencia artificial}
+
+Yo, \textbf{\autortesis}, autor(a) de la tesis \enquote{\titulotesis},
+declaro bajo protesta de decir verdad, respecto del uso de herramientas de
+inteligencia artificial generativa, que:
 
 \ifusoia$\square$\else$\boxtimes$\fi\enspace \textbf{No utilicé} herramientas
 de inteligencia artificial generativa en la elaboración de esta tesis.
@@ -67,7 +95,7 @@ continuación:
 \end{tabular}
 \end{center}
 
-Declaro que:
+Asimismo, declaro que:
 \begin{itemize}
   \item Revisé, verifiqué y edité todo el contenido producido con estas
         herramientas, y asumo plena responsabilidad por su exactitud.
@@ -80,18 +108,4 @@ Declaro que:
 \else.
 \fi
 
-% El cierre, la fecha y la firma van juntos (nunca se separan de página)
-\par\medskip\noindent\begin{minipage}{\linewidth}
-\setlength{\parskip}{0.15cm}
-Acepto que la falta de veracidad en esta declaración puede dar lugar a las
-sanciones previstas en la normativa de la Universidad Autónoma de Coahuila.
-
-\lugar, a \rule{1.2cm}{0.4pt} de \fecha.
-
-\vspace{1.3cm}
-\begin{center}
-  \rule{7cm}{0.4pt}\\
-  \autortesis
-\end{center}
-\end{minipage}
-\endgroup
+\firmadeclaracion
