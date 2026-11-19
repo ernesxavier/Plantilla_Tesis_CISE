@@ -1,5 +1,7 @@
 # Plantilla de tesis — CISE, UAdeC
 
+[![Abrir en Overleaf](https://img.shields.io/badge/Abrir%20en-Overleaf-47A141?logo=overleaf)](https://www.overleaf.com/docs?snip_uri=https://github.com/ernesxavier/Plantilla_Tesis_CISE/archive/refs/heads/main.zip)
+
 Plantilla en LaTeX para tesis del Centro de Investigaciones Socioeconómicas (CISE) de la Universidad Autónoma de Coahuila. Reproduce las dos páginas de portada de las tesis del CISE con sus mismas medidas: la tapa con triple marco y el recuadro que coincide con la tapa al empastar, y la portada interior con los logos del Manual de Marca de la UAdeC. También incluye ejemplos listos para usar de citas, ecuaciones, tablas, figuras, subfiguras y anexos.
 
 Autor: Ernesto X. Vera Gómez, Centro de Investigaciones Socioeconómicas (CISE), Universidad Autónoma de Coahuila
@@ -9,6 +11,7 @@ Vista previa: [`main.pdf`](main.pdf)
 ## Uso en Overleaf
 
 1. Abra la plantilla en Overleaf (enlace de la galería: *pendiente*) y pulse **Open as Template**.
+   - Otra opción: pulse el botón **Abrir en Overleaf** de arriba, que crea un proyecto nuevo con la versión más reciente de este repositorio.
    - Otra opción: descargue este repositorio como ZIP y en Overleaf use **New Project → Upload Project**.
 2. Compile. Overleaf usa pdfLaTeX y ejecuta Biber automáticamente.
 
