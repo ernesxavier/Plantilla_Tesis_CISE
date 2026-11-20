@@ -12,8 +12,16 @@
 \newcommand{\titulotesis}{Título de la tesis}
 \newcommand{\autortesis}{Nombre Completo del Estudiante}
 \newcommand{\matricula}{000000}   % Solo se usa en la declaración de originalidad
-\newcommand{\programa}{Doctorado en Economía Regional}
-\newcommand{\grado}{Doctor(a) en Ciencias en Economía Regional}
+\newcommand{\programamaestria}{Maestría en Economía Regional}
+\newcommand{\programadoctorado}{Doctorado en Economía Regional}
+\newcommand{\gradomaestria}{Maestro(a) en Economía Regional}
+\newcommand{\gradodoctorado}{Doctor(a) en Economía Regional}
+% ¿Maestría o doctorado? (\maestriatrue para maestría, \maestriafalse
+% para doctorado). Cambia el programa y el grado a la vez.
+\newif\ifmaestria
+\maestriafalse
+\newcommand{\programa}{\ifmaestria\programamaestria\else\programadoctorado\fi}
+\newcommand{\grado}{\ifmaestria\gradomaestria\else\gradodoctorado\fi}
 \newcommand{\director}{Dr(a). Nombre del Director(a) (CISE)}
 \newcommand{\codirector}{Dr(a). Nombre del Codirector(a) (CISE)}
 \newcommand{\lectoruno}{Dr(a). Nombre del Lector(a) (Institución)}
