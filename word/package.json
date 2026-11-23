@@ -1,0 +1,7 @@
+{
+  "name": "plantilla-tesis-cise-word",
+  "private": true,
+  "description": "Genera la versión Word (.docx) de la plantilla de tesis del CISE",
+  "scripts": { "build": "node generar.js" },
+  "dependencies": { "docx": "9.16.0" }
+}
